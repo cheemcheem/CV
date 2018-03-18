@@ -37,13 +37,20 @@ body {
 
 }
 
-#ContentBreak {
+.content-break {
     display: none;
 }
 
+.nav-break {
+    display: block;
+}
+
 @media screen and (max-width: 767px) {
-    #ContentBreak {
+    .content-break {
         display: block;
+    }
+    .nav-break {
+        display: none;
     }
     .header {
         display: none!important;
@@ -96,23 +103,24 @@ body {
 :hover {
     transition: color linear 0.25s;
 }
-#sideNav ul li a.active {
+
+div.sidebar ul.nav li.nav-item a.nav-link.active {
     background: saddlebrown;
 }
 
-#topNavbar ul li a.active {
+div#nav-items-div ul li a.active {
     color: saddlebrown;
 }
 
-#sideNav ul li a.nav-link:hover {
+a.nav-link:hover {
     color: saddlebrown;
 }
 
-#sideNav ul li a.nav-link.active:hover {
+li.nav-item a.nav-link.active:hover {
     color: peru;
 }
 
-#topNavbar ul li {
+div.collapse ul li {
     font-size: x-large;
 }
 
@@ -121,7 +129,7 @@ body {
 
 }
 
-#sideNav ul {
+li.nav-item {
     padding: 15px 15px 15px 15px;
 }
 
@@ -135,7 +143,6 @@ body {
 }
 
 .sideNav {
-    height: 85vh;
+    height: 100%;
     overflow-y: auto;
 }
-

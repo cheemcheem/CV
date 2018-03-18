@@ -29,16 +29,18 @@ $(document).ready(function () {
 });
 $(window).on('resize', resetNavOnSizeChange);
 function resetNavOnSizeChange() {
-    let topNavDivClasses = "";
+    let topNavDivClasses = "d-md-none";
     let topNavClasses = "navbar navbar-toggleable-md bg-light navbar-light fixed-top";
     let topNavExpandNameClasses = "navbar-brand";
     let topNavExpandButtonClasses = "navbar-toggler navbar-toggler-right";
     let topNavItemsDivClasses = "collapse navbar-collapse";
     let topNavItemsUl = "navbar navbar-nav mr-auto mt-2 mt-md-0";
 
-    let sideNavDivClasses = "col-md-3 col-xl-2 offset-xl sideNav";
+    let sideNavDivClasses = "col-md-3 col-xl-2 d-none d-md-block offset-xl-1 sideNav";
     let sideNavClasses = "navbar sidebar navbar-light border rounded";
-    let sideNavItemsUl = "nav nav-pills flex-column";
+    let sideNavItemsDivClasses = "sidebar";
+    let sideNavItemsUlClasses = "nav nav-pills flex-column";
+    let sideNavItemsImageClasses = "card-img-top";
 
     let visible = "visible";
     let hidden = "hidden";
@@ -62,7 +64,7 @@ function resetNavOnSizeChange() {
     if($(window).width() < 768) {
         navDiv.addClass(topNavDivClasses);
         nav.addClass(topNavClasses);
-        navDiv.css('position: relative');
+        navDiv.css('position', 'relative');
         navExpandName.addClass(topNavExpandNameClasses);
         navExpandButton.addClass(topNavExpandButtonClasses);
         navItemsDiv.addClass(topNavItemsDivClasses);
@@ -71,12 +73,12 @@ function resetNavOnSizeChange() {
     } else {
         navDiv.addClass(sideNavDivClasses);
         nav.addClass(sideNavClasses);
-        navDiv.css('position: fixed');
+        navDiv.css('position', 'fixed');
         navExpandName.addClass(hidden);
         navExpandButton.addClass(hidden);
-        // navItemsDiv.addClass();
-        navItemsImage.addClass(visible);
-        navItemsUl.addClass(sideNavItemsUl);
+        navItemsDiv.addClass("sidebar");
+        navItemsImage.addClass(sideNavItemsImageClasses);
+        navItemsUl.addClass(sideNavItemsUlClasses);
         navItemsUl.css('width:100%');
     }
 }
