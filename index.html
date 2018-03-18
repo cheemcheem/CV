@@ -1,241 +1,202 @@
 <!DOCTYPE html>
-<!--TODO make it write itself on load-->
 <html lang="en">
 <head>
-    <title>Kathan's CV</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kathan Cheema's CV</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Icons on all devices generated at https://faviconographer.com/ -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d58e5b">
-    <meta name="apple-mobile-web-app-title" content="Kathan Cheema's CV">
-    <meta name="application-name" content="Kathan Cheema's CV">
-    <meta name="msapplication-TileColor" content="#d58e5b">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d58e5b">
+	<meta name="apple-mobile-web-app-title" content="Kathan Cheema's CV">
+	<meta name="application-name" content="Kathan Cheema's CV">
+	<meta name="msapplication-TileColor" content="#d58e5b">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Initialise Script -->
+	<script src="script.js#"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Style Sheet -->
+	<link rel="stylesheet" href="style.css">
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js#"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="135">
-
 <div class="container-fluid">
+	<div class="row">
+		<!-- Top NavBar -->
+		<div class="d-md-none">
+			<nav class="navbar navbar-toggleable-md bg-light navbar-light fixed-top">
+				<a class="navbar-brand" href="#">Kathan Cheema</a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+						data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false"
+						aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="topNavbar">
+					<ul class="navbar navbar-nav mr-auto mt-2 mt-md-0">
+						<li class="nav-item hidden projects">
+							<a class="nav-link active" href="#Projects">Projects</a>
+						</li>
+						<li class="nav-item hidden work-exp">
+							<a class="nav-link" href="#WorkExp">Work Experience</a>
+						</li>
+						<li class="nav-item hidden education">
+							<a class="nav-link" href="#Education">Education</a>
+						</li>
+						<li class="nav-item hidden languages">
+							<a class="nav-link" href="#Languages">Languages</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 
-    <div class="row">
-        <div class="d-md-none">
-            <nav class="navbar navbar-toggleable-md bg-light navbar-light fixed-top">
-                <a class="navbar-brand" href="#">Kathan Cheema</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                        data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="topNavbar">
-                    <ul class="navbar navbar-nav mr-auto mt-2 mt-md-0">
-                        <li class="nav-item hidden projects">
-                            <a class="nav-link active" href="#Projects">Projects</a>
-                        </li>
-                        <li class="nav-item hidden work-exp">
-                            <a class="nav-link" href="#WorkExp">Work Experience</a>
-                        </li>
-                        <li class="nav-item hidden education">
-                            <a class="nav-link" href="#Education">Education</a>
-                        </li>
-                        <li class="nav-item hidden languages">
-                            <a class="nav-link" href="#Languages">Languages</a>
-                        </li>
-                    </ul>
-                </div>
+		<!-- Left NavBar -->
+		<div class="col-md-3 col-xl-2 d-none d-md-block offset-xl-1" style="position: fixed">
+			<br>
+			<div class="sideNav">
+				<nav class="navbar sidebar navbar-light border rounded" id="sideNav">
+					<img class="card-img-top" src="images/me/kathan.jpeg">
+					<ul class="nav nav-pills flex-column" style="width: 100%">
+						<li class="nav-item hidden projects">
+							<a class="nav-link" href="#Projects">Projects</a>
+						</li>
+						<li class="nav-item hidden work-exp">
+							<a class="nav-link" href="#WorkExp">Work Experience</a>
+						</li>
+						<li class="nav-item hidden education">
+							<a class="nav-link" href="#Education">Education</a>
+						</li>
+						<li class="nav-item hidden languages">
+							<a class="nav-link" href="#Languages">Languages</a>
+						</li>
+					</ul>
+				</nav>
+				<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+				<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="kathancheema">
+					<a class="LI-simple-link" href='https://uk.linkedin.com/in/kathancheema?trk=profile-badge'>
+						Kathan Cheema
+					</a>
+				</div>
+			</div>
+		</div>
 
-            </nav>
-        </div>
-        <div class="col-md-3 col-xl-2 d-none d-md-block offset-xl-1" style="position: fixed">
-            <br>
-            <div class="sideNav">
-                <nav class="navbar sidebar navbar-light border rounded" id="sideNav">
-                    <!--<h3 class="text-center">Contents</h3>-->
-                    <img class="card-img-top" src="images/me/kathan.jpeg">
-                    <ul class="nav nav-pills flex-column" style="width: 100%">
-                        <li class="nav-item hidden projects">
-                            <a class="nav-link" href="#Projects">Projects</a>
-                        </li>
-                        <li class="nav-item hidden work-exp">
-                            <a class="nav-link" href="#WorkExp">Work Experience</a>
-                        </li>
-                        <li class="nav-item hidden education">
-                            <a class="nav-link" href="#Education">Education</a>
-                        </li>
-                        <li class="nav-item hidden languages">
-                            <a class="nav-link" href="#Languages">Languages</a>
-                        </li>
-                    </ul>
-                    <!--<form class="form-inline my-2 my-lg-0 ">-->
-                    <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
-                    <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-                    <!--</form>-->
+		<!-- Content -->
+		<div class="col-sm col-md-9 col-xl-8 offset-md-3" id="Content">
+			<br>
 
-                    <!--<form class="form-inline" action="">-->
-                    <!--<input class="form-control mr-sm-2" type="text" placeholder="Search">-->
-                    <!--<button class="btn btn-success" type="submit">Search</button>-->
-                    <!--</form>-->
-                </nav>
-                <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+			<!-- Name Section -->
+			<div class="visible card header">
+				<div class="card-header">
+					<h1 class="text-center row d-none d-md-block" id="Heading">Kathan Cheema</h1>
+					<h1 class="text-center d-md-none">&zwnj;</h1>
+				</div>
+			</div>
 
-                <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="kathancheema"><a class="LI-simple-link" href='https://uk.linkedin.com/in/kathancheema?trk=profile-badge'>Kathan Cheema</a></div>
-                <script async defer>
+			<br>
+			<br id="ContentBreak">
 
-                </script>
+			<!-- Projects Section -->
+			<div class="card" id="Projects">
+				<div class="card-header bg-primary text-white">Projects</div>
+				<div class="card-body">
+					<p></p>
+				</div>
+				<br>
+			</div>
 
-            </div>
+			<!-- Work Experience Section -->
+			<div class="card" id="WorkExp">
+				<div class="card-header bg-primary text-white">Work Experience</div>
+				<div class="card-body">
 
-        </div>
-        <div class="col-sm col-md-9 col-xl-8 offset-md-3" id="Content">
-            <br>
-            <div class="visible card header">
-                <div class="card-header">
-                    <h1 class="text-center row d-none d-md-block" id="Heading">Kathan Cheema</h1>
-                    <h1 class="text-center d-md-none">&zwnj;</h1>
-                </div>
-            </div>
-            <br>
-            <br id="ContentBreak">
-            <div class="card" id="Projects">
-                <div class="card-header bg-primary text-white">Projects</div>
-                <div class="card-body">
-                    <p></p>
-                </div>
-                <br>
-            </div>
+				</div>
+				<br>
+			</div>
 
-            <div class="card" id="WorkExp">
-                <div class="card-header bg-primary text-white">Work Experience</div>
-                <div class="card-body">Lorem ipsum dolor sit amet, te nec altera quaestio. Te tale quaestio vis, duo
-                    verterem periculis ad. Facer eripuit ut pri, ex hinc posse quaerendum cum. Eam in sonet dicant
-                    salutandi, simul intellegam vim in. Audire scriptorem ex his, sit veniam semper eripuit at, ne pri
-                    cetero docendi aliquando. No aliquip fuisset duo, no modo affert scripserit est.
+			<!-- Education Section -->
+			<div class="card" id="Education">
+				<div class="card-header bg-primary text-white">Education</div>
+				<div class="card-body">
+					<!-- University Section -->
+					<div id="uni">
+						<h4>
 
-                    Esse dolor adipiscing vix et, harum tamquam nec eu, an qui sint atomorum. Id vis nonumy causae
-                    graecis, evertitur consetetur consequuntur an usu. Inermis ceteros sadipscing vix ad, ad assum
-                    expetenda ius. Veniam postea eos at, cibo saepe ceteros per no. Ut erant vivendo eum, cu has autem
-                    diceret postulant. Ferri dicta ludus pri ex, ceteros prodesset quo ne, sea tractatos adipiscing te.
+						</h4>
+						<h5>
 
-                    Suas legimus adolescens has at, ne soluta inciderint sit, usu ne odio latine vulputate. His stet
-                    nostrud lobortis ad. Ne pro veri oporteat deseruisse, his aliquam perfecto honestatis cu, vix ne
-                    nostrum lobortis consetetur. An noster scripta senserit mei, est ullum sensibus dissentiunt an,
-                    definiebas definitiones no pri. Ut virtute expetendis has, est ea soluta perpetua rationibus.
+						</h5>
+						<em>
 
-                    Augue dolores definitiones ut quo. Vix eripuit delectus appetere te, pri at aeterno nostrud
-                    intellegebat. Vix prima timeam interpretaris an, nec dolorum accusata ea, et vix quas partiendo
-                    contentiones. Admodum forensibus quaerendum vis in.
+						</em>
+						<div class="row">
 
-                    Pri facilis insolens reprimique ex, cu his graeco latine. In eam utinam invidunt inimicus, te
-                    oblique corpora eos, vis ad viris partem percipitur. Decore utinam eos id. Vidit malis suscipiantur
-                    te mea, et cum pericula principes.
+						</div>
+					</div>
 
-                    Vis ut veri novum errem, ex inani aeterno omnesque his. Nam semper dolorum maluisset ne, an aeterno
-                    feugiat omittam eam. Et sit doctus minimum, duo eu congue iriure dissentiunt, nam diam dicta
-                    menandri ei. Cu nec soleat ullamcorper, mei nostro deseruisse no. Pri legere vocibus in, ad mea odio
-                    primis maiestatis.
+					<!-- Open IT Section -->
+					<div id="openIT">
+						<h4>
 
-                    No aperiam officiis iudicabit vel, id qui recusabo convenire signiferumque. Eum movet aperiri ea,
-                    pro no quis choro suavitate. Mel intellegat mnesarchum definitionem in, sed nostrud nominavi
-                    expetendis in, ne errem omnesque nec. An has eros eruditi salutandi, melius dolorum et vim.
+						</h4>
+						<h5>
 
-                    Eum id porro definitionem, malis ubique tritani est ei. Vix modo animal dolorem ut, duo tota feugiat
-                    no. Prompta recusabo sit ei, quo partiendo mediocritatem ea, ei autem erant qualisque mei. Oblique
-                    bonorum gubergren his ne. Est ad dicta persecuti, ea eum graecis fuisset.
+						</h5>
+						<em>
 
-                    Ne per odio ponderum. Possit quodsi contentiones mei ad, et ius diceret bonorum. Vix ne cibo
-                    hendrerit, cum at alia facer. Vide decore ne sit, sumo dolorem principes mea ne. Et vidit vivendum
-                    pro, audire signiferumque sea ut.
+						</em>
+						<div>
 
-                    Ex vel fuisset volutpat eloquentiam, pri ceteros suscipit suavitate ea. At esse debitis efficiantur
-                    sed, ei offendit assentior mea, his cu viderer ceteros. Ut nisl partiendo pertinacia cum, ut sit
-                    veniam sadipscing. Ei summo temporibus est, est in doctus offendit convenire. Ei labore molestie
-                    pri.
-                </div>
-                <br>
-            </div>
+						</div>
+					</div>
 
-            <div class="card" id="Education">
-                <div class="card-header bg-primary text-white">Education</div>
-                <div class="card-body">
-                    <div id="uni">
-                        <h4>
-                            <!--2015 - Present-->
-                        </h4>
-                        <h5>
-                            <!--University of St Andrews-->
-                        </h5>
-                        <em>
-                            <!--BSci (Honours) Computer Science-->
-                        </em>
-                        <div class="row">
-                        </div>
-                    </div>
+					<!-- School Section -->
+					<div id="school">
+						<h4>
 
-                    <div id="openIT">
-                        <h4>
+						</h4>
+						<h5>
 
-                        </h4>
-                        <h5>
+						</h5>
+						<em>
 
-                        </h5>
-                        <em>
+						</em>
+						<div class="row">
 
-                        </em>
-                        <div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                        </div>
-                    </div>
+			<!-- Languages Section -->
+			<div class="card" id="Languages">
+				<div class="card-header bg-primary text-white">Languages</div>
+				<div class="card-body">
+					<p>
 
-                    <div id="school">
-                        <h4>
+					</p>
+					<div class="row">
 
-                        </h4>
-                        <h5>
+					</div>
+				</div>
+			</div>
 
-                        </h5>
-                        <em>
-
-                        </em>
-                        <div class="row">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" id="Languages">
-                <div class="card-header bg-primary text-white">Languages</div>
-                <div class="card-body">
-                    <p>
-
-                    </p>
-                    <div class="row">
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
 </body>
 </html>
