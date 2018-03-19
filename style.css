@@ -1,8 +1,8 @@
 /*General*/
 
 * {
-    -webkit-transition: all ease-in 0.5s;
-    transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s;
 }
 
 .visible {
@@ -54,6 +54,9 @@ body {
     }
     .header {
         display: none!important;
+    }
+    .LI-profile-badge {
+        display: none;
     }
 }
 /*Cards*/
@@ -109,7 +112,11 @@ div.sidebar ul.nav li.nav-item a.nav-link.active {
 }
 
 div#nav-items-div ul li a.active {
-    color: saddlebrown;
+     color: saddlebrown;
+}
+
+div#nav-items-div.sidebar ul li a.active {
+     color: ivory;
 }
 
 a.nav-link:hover {
@@ -130,7 +137,7 @@ div.collapse ul li {
 }
 
 li.nav-item {
-    padding: 15px 15px 15px 15px;
+    padding: 10px 15px 10px 15px;
 }
 
 .sidebar {
@@ -145,4 +152,8 @@ li.nav-item {
 .sideNav {
     height: 100%;
     overflow-y: auto;
+}
+
+.LI-profile-badge {
+    width: 100% !important;
 }

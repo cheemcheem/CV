@@ -1,7 +1,7 @@
 const test = "Lorem ipsum dolor sit amet, te nec altera quaestio. Te tale quaestio vis, duo\n                    verterem periculis ad. Facer eripuit ut pri, ex hinc posse quaerendum cum. Eam in sonet dicant\n                    salutandi, simul intellegam vim in. Audire scriptorem ex his, sit veniam semper eripuit at, ne pri\n                    cetero docendi aliquando. No aliquip fuisset duo, no modo affert scripserit est.\n\n                    Esse dolor adipiscing vix et, harum tamquam nec eu, an qui sint atomorum. Id vis nonumy causae\n                    graecis, evertitur consetetur consequuntur an usu. Inermis ceteros sadipscing vix ad, ad assum\n                    expetenda ius. Veniam postea eos at, cibo saepe ceteros per no. Ut erant vivendo eum, cu has autem\n                    diceret postulant. Ferri dicta ludus pri ex, ceteros prodesset quo ne, sea tractatos adipiscing te.\n\n                    Suas legimus adolescens has at, ne soluta inciderint sit, usu ne odio latine vulputate. His stet\n                    nostrud lobortis ad. Ne pro veri oporteat deseruisse, his aliquam perfecto honestatis cu, vix ne\n                    nostrum lobortis consetetur. An noster scripta senserit mei, est ullum sensibus dissentiunt an,\n                    definiebas definitiones no pri. Ut virtute expetendis has, est ea soluta perpetua rationibus.\n\n                    Augue dolores definitiones ut quo. Vix eripuit delectus appetere te, pri at aeterno nostrud\n                    intellegebat. Vix prima timeam interpretaris an, nec dolorum accusata ea, et vix quas partiendo\n                    contentiones. Admodum forensibus quaerendum vis in.\n\n                    Pri facilis insolens reprimique ex, cu his graeco latine. In eam utinam invidunt inimicus, te\n                    oblique corpora eos, vis ad viris partem percipitur. Decore utinam eos id. Vidit malis suscipiantur\n                    te mea, et cum pericula principes.\n\n                    Vis ut veri novum errem, ex inani aeterno omnesque his. Nam semper dolorum maluisset ne, an aeterno\n                    feugiat omittam eam. Et sit doctus minimum, duo eu congue iriure dissentiunt, nam diam dicta\n                    menandri ei. Cu nec soleat ullamcorper, mei nostro deseruisse no. Pri legere vocibus in, ad mea odio\n                    primis maiestatis.\n\n                    No aperiam officiis iudicabit vel, id qui recusabo convenire signiferumque. Eum movet aperiri ea,\n                    pro no quis choro suavitate. Mel intellegat mnesarchum definitionem in, sed nostrud nominavi\n                    expetendis in, ne errem omnesque nec. An has eros eruditi salutandi, melius dolorum et vim.\n\n                    Eum id porro definitionem, malis ubique tritani est ei. Vix modo animal dolorem ut, duo tota feugiat\n                    no. Prompta recusabo sit ei, quo partiendo mediocritatem ea, ei autem erant qualisque mei. Oblique\n                    bonorum gubergren his ne. Est ad dicta persecuti, ea eum graecis fuisset.\n\n                    Ne per odio ponderum. Possit quodsi contentiones mei ad, et ius diceret bonorum. Vix ne cibo\n                    hendrerit, cum at alia facer. Vide decore ne sit, sumo dolorem principes mea ne. Et vidit vivendum\n                    pro, audire signiferumque sea ut.\n\n                    Ex vel fuisset volutpat eloquentiam, pri ceteros suscipit suavitate ea. At esse debitis efficiantur\n                    sed, ei offendit assentior mea, his cu viderer ceteros. Ut nisl partiendo pertinacia cum, ut sit\n                    veniam sadipscing. Ei summo temporibus est, est in doctus offendit convenire. Ei labore molestie\n                    pri.";
 $(document).ready(function () {
-    resetNavOnSizeChange();
     checkDataOffset();
+    resetNavOnSizeChange();
     window.addEventListener('resize', checkDataOffset, true);
     $('[data-toggle="popover"]').popover();
     $.get("https://platform.linkedin.com/badges/js/profile.js", function (data) {
@@ -27,7 +27,9 @@ $(document).ready(function () {
     }
 
 });
+
 $(window).on('resize', resetNavOnSizeChange);
+
 function resetNavOnSizeChange() {
     let topNavDivClasses = "d-md-none";
     let topNavClasses = "navbar navbar-toggleable-md bg-light navbar-light fixed-top";
@@ -76,7 +78,7 @@ function resetNavOnSizeChange() {
         navDiv.css('position', 'fixed');
         navExpandName.addClass(hidden);
         navExpandButton.addClass(hidden);
-        navItemsDiv.addClass("sidebar");
+        navItemsDiv.addClass(sideNavItemsDivClasses);
         navItemsImage.addClass(sideNavItemsImageClasses);
         navItemsUl.addClass(sideNavItemsUlClasses);
         navItemsUl.css('width:100%');
